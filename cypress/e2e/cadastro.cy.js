@@ -8,13 +8,11 @@ describe('Funcionalidade Cadastro', () => {
     });
 
     it('Deve completar o cadastro com sucesso', () => {
-        // Usando a lógica do Page Object
         cadastroPage.preencherCadastro(
             faker.internet.email(), 
             'teste@123'
         )
         
-        // Validação (exemplo)
         cy.get('.woocommerce-MyAccount-content').should('contain', 'Olá')
     });
 });

@@ -25,9 +25,9 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('finalizarCheckout', (dados) => {
-    // Adiciona o produto ao carrinho via parâmetro de URL e visita o carrinho
+   
     cy.visit(`/carrinho/?add-to-cart=${dados.id}`) 
     
-    // Aguarda o carregamento da página do carrinho
+   
     cy.url().should('include', '/carrinho')
 })

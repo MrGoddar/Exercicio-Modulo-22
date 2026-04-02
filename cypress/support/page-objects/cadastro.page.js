@@ -1,7 +1,7 @@
 class CadastroPage {
-    // Aqui definimos os seletores e as ações
+    
     visitar() {
-        cy.visit('minha-conta') // Altere para a URL correta do ecommerce da EBAC
+        cy.visit('minha-conta') 
     }
 
     preencherCadastro(email, senha) {
