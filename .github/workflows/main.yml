@@ -1,0 +1,30 @@
+name: CI Módulo 26 - Relatório
+
+on:
+  push:
+    branches: [ "exercicio-modulo-23" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm test
+
+      # Comando que prepara o relatório para o GitHub Pages
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: './mochawesome-report' # Ajuste aqui se sua pasta de relatório tiver outro nome
