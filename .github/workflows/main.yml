@@ -25,6 +25,6 @@ jobs:
 
       # Comando que prepara o relatório para o GitHub Pages
       - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './mochawesome-report' # Ajuste aqui se sua pasta de relatório tiver outro nome
